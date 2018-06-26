@@ -1,0 +1,29 @@
+<% include ../partials/header%>
+
+<div class="row">
+    <div class="col-md-4">
+        <h1><%= user.firstName + " " + user.lastName %></h1>
+        <div class="card">
+            <img src="<%= user.avatar %>" alt="user profile image">
+            <div class="caption" >
+                <a href="mailto:<%= user.email %>">
+                    <%= user.email %>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="container">
+            <h3><%= user.username %>'s Posts</h3>
+            <ul>
+                <% courts.forEach(function(court) { %> 
+                    <li> <a href="/courts/<%= court.id %>"><%= court.name %></a> </li>
+                <% }); %>  
+                <hr>
+                <a href="/forgot/">Reset your password</a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer%>

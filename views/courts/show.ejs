@@ -1,0 +1,93 @@
+<% include ../partials/header%>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div id="map"></div>
+        </div>
+        <div class="col-md-9">
+            <div class="card mb-3">
+                <img class="card-img-top" src="<%= court.image %>" alt="<%= court.name %>">
+                <div class="card-body">
+                    <p class="float-right"><%= court.price %>€/hour</p>
+                    <h5 class="card-title"><%= court.name %></h5>
+                    <p class="card-text"><%= court.description %></p>
+                    <hr>
+                    <p>
+                      <em>Submitted by: <a href="/users/<%= court.author.id %>"><%= court.author.username %></a>, 
+                      <%= moment(court.createdAt).fromNow() %></em>
+                    </p>
+                    <% if(currentUser && court.author.id.equals(currentUser._id) || (currentUser && currentUser.isAdmin)) { %>
+                        <a class="btn btn-warning" href="/courts/<%= court._id %>/edit">Edit</a>
+                        <form class="delete-form" action="/courts/<%= court._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-right">
+                        <a class="btn btn-success" href="/courts/<%= court._id %>/comments/new">Add new comment</a>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <% court.comments.forEach(function(comment){ %>
+                          <div class="col-md-12 mb-2">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="float-left">
+                                  <p class="card-title"><a href="/users/<%= comment.author.id %>"><%= comment.author.username %></a></p>
+                                  <p class="card-text"><%= comment.text %></p>
+                                </div>
+                                <div class="float-right">
+                                  <p><%= moment(comment.createdAt).fromNow() %></p>
+                                  
+                                  <% if(currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                  <div class="float-right">
+                                    <a href="/courts/<%=court._id%>/comments/<%=comment._id%>/edit" class="btn btn-sm btn-warning">Edit</a>
+                                    <form class="delete-form" action="/courts/<%=court._id%>/comments/<%=court._id%>?_method=DELETE" method="POST">
+                                      <button class="btn btn-sm btn-danger">Delete</button>
+                                    </form>
+                                  </div>
+                                  <% } %>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      function initMap() {
+        var lat = <%= court.lat %>;
+        var lng = <%= court.lng %>;
+        var center = {lat: lat, lng: lng };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 8,
+            center: center,
+            scrollwheel: false
+        });
+        var contentString = `
+          <strong><%= court.name %><br />
+          <%= court.location %></strong>
+          <p><%= court.description %></p>
+        `
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        var marker = new google.maps.Marker({
+            position: center,
+            map: map
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqnEHRkftVPHCTD1I7bZeOHed0vzmEhpY&callback=initMap"></script>
+
+
+<% include ../partials/footer%>

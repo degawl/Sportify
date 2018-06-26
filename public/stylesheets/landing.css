@@ -1,0 +1,82 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://images.unsplash.com/photo-1434854775064-aa2c72a4aa32?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0cb3fcd63c345194bbdebe3d2283de64&auto=format&fit=crop&w=1780&q=80) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(http://hoogne.weebly.com/uploads/2/6/3/4/26349119/1125619_orig.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://images.unsplash.com/photo-1457470572216-1240fac24b37?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=55deb0321eb4f5c74de90337fc3847da&auto=format&fit=crop&w=1350&q=80);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://images.unsplash.com/photo-1433800881591-a31e7bff3f22?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bcf87b984cce03d511b47ba035d9c1b&auto=format&fit=crop&w=1350&q=80);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://images.unsplash.com/photo-1489824740691-7a25f94fc85a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a00af6d5442b9b1bc18499e976641518&auto=format&fit=crop&w=1778&q=80);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
