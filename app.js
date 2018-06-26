@@ -17,7 +17,8 @@ var commentRoutes = require("./routes/comments"),
     courtRoutes   = require("./routes/courts"),
     indexRoutes   = require("./routes/index");
     
-mongoose.connect("mongodb://localhost/sportify");
+//mongoose.connect("mongodb://localhost/sportify");
+mongoose.connect("mongodb://devon:antihero123@ds119651.mlab.com:19651/sportify");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
