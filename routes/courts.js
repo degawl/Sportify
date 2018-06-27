@@ -7,7 +7,7 @@ var NodeGeocoder = require('node-geocoder');
 var options = {
   provider: 'google',
   httpAdapter: 'https',
-  apiKey: "AIzaSyCuc54Q7mQjW6EFZ7XbNoZWBsvQPMnEp8Y",
+  apiKey: process.env.GEOCODERAPIKEY,
   formatter: null
 };
  
