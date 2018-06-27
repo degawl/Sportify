@@ -76,15 +76,11 @@ nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4.navbarindex {
     margin-bottom: 20px
 }
 
-#navbarsubmit {
-    margin-right: 20px;
-    margin-bottom: 5px;
-    background: transparent;
-    color: #b8bec4;
-}
-
 #fuzzySeachInput {
     background: transparent;
+    color: white;
+    height: 2em;
+    width: 10em;
 }
 
 .indextext {
