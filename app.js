@@ -18,7 +18,7 @@ var commentRoutes = require("./routes/comments"),
     indexRoutes   = require("./routes/index");
     
 var url = process.env.DATABASEURL || "mongodb://localhost/sportify"
-mongoose.connect(url);
+mongoose.connect("mongodb://localhost/sportify");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
