@@ -1,22 +1,26 @@
 @media (max-width: 768px) {
     /* CSS in here for mobile only */
     #map {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 20px;
-    height: 200px;
-    width: 100%;
-        
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 20px;
+        height: 200px;
+        width: 100%;
     }
 }
 
 @media (min-width: 769px) {
     /* CSS in here for desktop only */
     #map {
-    margin-bottom: 20px;
-    height: 95%;
-    width: 100%;
-        
+        margin-bottom: 20px;
+        height: 95%;
+        width: 100%;
+    }
+    .navbar-brand {
+        margin-left: 4em;
+    }
+    .navend {
+        margin-right: 3em;
     }
 }
 
@@ -27,10 +31,14 @@ html {
 
 body {
     margin-bottom: 60px;
+    background-color: #eaecef;
 }
 
 #fuzzySeachInput {
-    margin: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    
 }
 
 .footer {
@@ -49,3 +57,47 @@ body {
 .delete-form {
     display: inline;
 }
+
+.jumbotron{
+    background-image: url(https://images.unsplash.com/photo-1467809941367-bbf259d44dd6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c17bcc144ff22a0c0e5c63f9986fcbb&auto=format&fit=crop&w=1490&q=80) ;
+    background-size: cover; 
+    width: 100%;
+}
+
+nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4.navbarindex {
+    margin-bottom: 0!important;
+}
+
+#indextitle {
+    font-family: 'Oleo Script', cursive;
+    text-align: center;
+    color: white;
+    font-size: 8em;
+    margin-bottom: 20px
+}
+
+#navbarsubmit {
+    margin-right: 20px;
+    margin-bottom: 5px;
+    background: transparent;
+    color: #b8bec4;
+}
+
+#fuzzySeachInput {
+    background: transparent;
+}
+
+.indextext {
+    text-align: center;
+}
+
+.card {
+    background: #f7f8f9;
+}
+
+.alert{
+    margin-top: 15px;
+}
+
+
+
