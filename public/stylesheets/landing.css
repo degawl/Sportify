@@ -40,10 +40,10 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(https://images.unsplash.com/photo-1434854775064-aa2c72a4aa32?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0cb3fcd63c345194bbdebe3d2283de64&auto=format&fit=crop&w=1780&q=80) 
+  background-image: url(https://images.unsplash.com/photo-1433800881591-a31e7bff3f22?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bcf87b984cce03d511b47ba035d9c1b&auto=format&fit=crop&w=1350&q=80) 
 }
 .slideshow li:nth-child(2) { 
-  background-image: url(http://hoogne.weebly.com/uploads/2/6/3/4/26349119/1125619_orig.jpg);
+  background-image: url(https://images.unsplash.com/photo-1434854775064-aa2c72a4aa32?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0cb3fcd63c345194bbdebe3d2283de64&auto=format&fit=crop&w=1780&q=80);
   animation-delay: 10s; 
 }
 .slideshow li:nth-child(3) { 
@@ -51,7 +51,7 @@ body {
   animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url(https://images.unsplash.com/photo-1433800881591-a31e7bff3f22?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bcf87b984cce03d511b47ba035d9c1b&auto=format&fit=crop&w=1350&q=80);
+  background-image: url(http://hoogne.weebly.com/uploads/2/6/3/4/26349119/1125619_orig.jpg);
   animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
@@ -79,4 +79,11 @@ body {
 /* Older browser support - .no-cssanimations class added by modernizr */
 .no-cssanimations .slideshow li {
 	opacity: 1;
+}
+
+#landingword {
+    text-align: center;
+    color: #9a9fa8;
+    font-size: 4em;
+    margin-bottom: 20px
 }
