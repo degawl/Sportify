@@ -1,3 +1,25 @@
+@media (max-width: 768px) {
+    /* CSS in here for mobile only */
+    #map {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    height: 200px;
+    width: 100%;
+        
+    }
+}
+
+@media (min-width: 769px) {
+    /* CSS in here for desktop only */
+    #map {
+    margin-bottom: 20px;
+    height: 95%;
+    width: 100%;
+        
+    }
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -26,10 +48,4 @@ body {
 
 .delete-form {
     display: inline;
-}
-
-#map {
-    margin-bottom: 20px;
-    height: 400px;
-    width: 100%;
 }
