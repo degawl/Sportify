@@ -9,6 +9,7 @@ Technologies used: Node.js, Express.js, Google Maps API, Passport.js, MongoDB, C
 
 ```sh
 git clone git@github.com:degawl/sportify.git
+cd sportify
 npm install
 npm start
 ```
