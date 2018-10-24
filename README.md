@@ -3,7 +3,7 @@
 My first full-stack web-app created after completing the Udemy course "Web Developer Bootcamp".
 Technologies used: Node.js, Express.js, Google Maps API, Passport.js, MongoDB, CSS, HTML, EJS and probably something more I'm forgetting.
 
-##Check it out at https://sportifydevon.herokuapp.com
+## Check it out at https://sportifydevon.herokuapp.com
 
 ## Installation
 
