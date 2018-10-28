@@ -16,9 +16,10 @@ npm start
 
 ## Usage
 
-- Create a User
+- Create a User.
+- Reset user password if you forget.
 - Upload a picture of courts you've visited.
-- Add the location.
+- Add the location of the post.
 - See other users' posts and locations.
 - Comment on other users' posts.
 - See other users' profiles.
